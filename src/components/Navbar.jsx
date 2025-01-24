@@ -7,7 +7,7 @@ function Navbar() {
         'text-white transition-colors duration-200 ease-in-out hover:text-gray-200 active:text-gray-400';
 
     return (
-        <div className="flex flex-row justify-between items-center bg-blue-600 px-3 md:px-14 py-3">
+        <div className="flex flex-row justify-between items-center bg-blue-600 px-3 md:px-14 py-3 h-1/10">
             <img src={logo} alt="React Logo" className="w-14" />
             <nav className="flex flex-row gap-3.5">
                 <Link className={navigationLinkStyling} to="/">

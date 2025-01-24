@@ -7,7 +7,9 @@ function MainLayout() {
     return (
         <>
             <Navbar />
-            <Outlet />
+            <div className="bg-white h-8/10 px-3 md:px-14 py-2 md:py-4">
+                <Outlet />
+            </div>
             <Footer />
         </>
     );
