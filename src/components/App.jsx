@@ -4,11 +4,11 @@ import {
     createBrowserRouter,
     createRoutesFromElements,
 } from 'react-router-dom';
-import MainLayout from '../../layouts/MainLayout';
-import HomePage from '../../pages/HomePage';
-import GalleryPage from '../../pages/GalleryPage';
-import ProfilePage from '../../pages/ProfilePage';
-import ErrorPage from '../../pages/ErrorPage';
+import MainLayout from '../layouts/MainLayout';
+import HomePage from '../pages/HomePage';
+import GalleryPage from '../pages/GalleryPage';
+import ProfilePage from '../pages/ProfilePage';
+import ErrorPage from '../pages/ErrorPage';
 
 const router = createBrowserRouter(
     createRoutesFromElements(
