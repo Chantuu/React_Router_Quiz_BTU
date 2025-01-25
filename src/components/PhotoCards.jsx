@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { default as axios } from 'axios';
+import PhotoCard from './PhotoCard';
 
 function PhotoCards() {
     const [responseData, setResponseData] = useState([]);
@@ -24,13 +25,22 @@ function PhotoCards() {
     }, []);
 
     return (
-        <div className="h-full flex flex-row justify-center items-center">
-            {loading && (
-                <div className="text-6xl mb-12 text-blue-600">Loading</div>
+        <div className="h-full md:h-[57%] flex flex-row flex-wrap md:flex-nowrap justify-center items-stretch gap-2.5 content-center">
+            {loading && <p className="text-6xl mb-12 text-blue-600">Loading</p>}
+            {!loading && !error && (
+                <>
+                    {responseData.map((data) => (
+                        <PhotoCard
+                            key={data.id}
+                            id={data.id}
+                            title={data.title}
+                            url={data.url}
+                        />
+                    ))}
+                </>
             )}
-            {!loading && !error && <div></div>}
             {!loading && error && (
-                <div className="text-6xl mb-12 text-red-600">Error</div>
+                <p className="text-6xl mb-12 text-red-600">Error</p>
             )}
         </div>
     );
