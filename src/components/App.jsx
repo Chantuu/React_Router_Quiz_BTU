@@ -16,6 +16,7 @@ const router = createBrowserRouter(
             <Route index element={<HomePage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/profile/:profileName" element={<ProfilePage />} />
             <Route path="*" element={<ErrorPage />} />
         </Route>
     )
