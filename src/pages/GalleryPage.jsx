@@ -1,7 +1,12 @@
 import React from 'react';
+import PhotoCards from '../components/PhotoCards';
 
 function GalleryPage() {
-    return <div>Gallery Page</div>;
+    return (
+        <>
+            <PhotoCards />
+        </>
+    );
 }
 
 export default GalleryPage;
